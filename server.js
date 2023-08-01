@@ -7,12 +7,12 @@ const path = require('path');
 
 
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
 
 app.use('/', htmlRoutes)
 app.use('/api', apiRoutes)
 
-app.listen(PORT, ()=>
+app.listen(PORT, () =>
     console.log(`Serving static asset routes on port http://localhost:${PORT} !`)
 );
